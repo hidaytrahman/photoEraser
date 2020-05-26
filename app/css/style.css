@@ -1,0 +1,72 @@
+:root {
+    --color-primary: #ddd;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #949292;
+}
+
+.editor-wrapper {
+    max-width: 800px;
+    margin: 0 auto;
+    background: #fcfbfb;
+    padding: 2%;
+    border-radius: 12px;
+}
+
+#canvas {
+    border: 2px dashed var(--color-primary);
+    width: 800px;
+    height: 438px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .editor-wrapper {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.top-controls {
+    display: flex;
+    justify-content: space-between;
+}
+
+.brush-container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+
+h1 {
+    color: #949292;
+    border-bottom: 2px solid var(--color-primary);
+    padding-bottom: 1rem;
+    margin-bottom: 2rem;
+}
+
+#canvas p {
+    font-size: 3rem;
+    color: var(--color-primary);
+}
+
+
+.bottom-controls {
+    margin: 15px 0;
+}
+
+.button {
+    padding: 10px 22px;
+    border: 2px solid var(--color-primary);
+    color: #6a6666;
+    background: #f2f2f2;
+    cursor: pointer;
+}
+
+.custom-file input[type='file']{
+    display: none;
+}
