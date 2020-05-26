@@ -141,7 +141,7 @@
 		- ES6 Code Migrations
 		- Show Init stuff on load
 		- Code refactor
-		-
+		- Mobile event supports
 	* More
 		- SASS Implementation by SASS kickstart
 		- Documentations
