@@ -10,7 +10,7 @@
 
 
 ### Demo
-See the [Demo and Examples](https://hidaytrahman.github.io/sassKickstart/docs/)
+See the [Demo](https://bit.ly/3gnHa25)
 
 
 
