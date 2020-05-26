@@ -115,6 +115,8 @@
 
       console.log(imgWidth + " " + imgHeight);
       init(container, 800, 438, img.src);
+
+      document.getElementById('saveImage').style.display = 'block';
     }
 
 
@@ -130,7 +132,6 @@
 
 /* TODO
 	* Features
-		- Save Image in png, pdf
 		- Image Ration
 		- more possible controls
 		- Add drag and drop feature

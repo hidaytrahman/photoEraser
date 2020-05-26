@@ -23,11 +23,15 @@ body {
     justify-content: center;
     flex-direction: column;
     text-align: center;
-  }
+}
 
-  .editor-wrapper {
+.editor-wrapper {
     max-width: 800px;
     margin: 0 auto;
+}
+
+#saveImage {
+    display: none;
 }
 
 .top-controls {
@@ -67,6 +71,6 @@ h1 {
     cursor: pointer;
 }
 
-.custom-file input[type='file']{
+.custom-file input[type='file'] {
     display: none;
 }
