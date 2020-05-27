@@ -23,6 +23,11 @@ body {
     justify-content: center;
     flex-direction: column;
     text-align: center;
+    
+}
+
+#canvas canvas {
+    cursor: url(../assets/img/cursors/pencil.cur), none;
 }
 
 .editor-wrapper {

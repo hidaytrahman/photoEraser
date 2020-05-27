@@ -15,10 +15,6 @@
     return canvas;
   }
 
-  function download(canvas) {
-    var data = canvas.toDataURI();
-    console.log("data", data);
-  }
 
   // draw an image instead color
   function drawImage(ctx, width, height, resource) {
@@ -32,21 +28,32 @@
       var pattern = ctx.createPattern(img, "no-repeat");
       ctx.fillStyle = pattern;
       ctx.fillRect(0, 0, width, height);
-      //ctx.fillRect(0, 0, 300, 300);
     };
   }
 
-  // custom brush size
-  const brushSizeDOM = document.querySelector("#brushSize");
-  let currentBrush = document.querySelector("#currentBrush");
+  createBrush();
 
-  let brushSize = 5;
-  brushSizeDOM.addEventListener("change", function (e) {
-    console.log("e", e);
-    console.log("this", this.value);
-    currentBrush.innerHTML = this.value;
-    brushSize = this.value;
-  });
+  var brushSize = 5;
+  function createBrush() {
+    // custom brush size
+    const brushSizeDOM = document.querySelector("#brushSize");
+   
+    updateBrush(false, brushSizeDOM);
+
+    brushSizeDOM.addEventListener("change", function (e) {
+      updateBrush(this, brushSizeDOM);
+    });
+
+  }
+
+  function updateBrush(brush, brushDom) {
+    (brush) ? brushSize = brush.value : brushSize = 5;
+
+    let currentBrush = document.querySelector("#currentBrush");
+    currentBrush.innerHTML = brushSize;
+    brushDom.value = brushSize;
+   
+  }
 
   // init functiions
   function init(container, width, height, resource) {
@@ -137,14 +144,13 @@
 
 /* TODO
 	* Features
-		- Image Ration
+		- Image Ratio
 		- more possible controls
 		- Add drag and drop feature
 		- Upload image by url
 		
 	* Fixes
 		- ES6 Code Migrations
-		- Show Init stuff on load
 		- Code refactor
 		- Mobile event supports
 	* More
