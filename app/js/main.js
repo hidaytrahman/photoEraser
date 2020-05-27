@@ -95,11 +95,17 @@
   // select canvas wrapper
   var container = document.getElementById("canvas");
 
+  var canHeight = 400;
+  var canWidth = 800;
+  container.style.width = canWidth+'px';
+  container.style.height = canHeight+'px';
+
   // ----- IMAGE UPLOAD SECTION ---- //
   var uploadImg = document.querySelector("#uploadImg");
 
   var _URL = window.URL || window.webkitURL;
   var currentImg;
+
   uploadImg.addEventListener("change", function () {
     var file, img, imgWidth, imgHeight;
     if ((file = this.files[0])) {
@@ -108,13 +114,12 @@
       img.onload = function () {
         imgWidth = this.width;
         imgHeight = this.height;
-        console.log(imgWidth + " " + imgHeight);
+        //console.log(imgWidth + " " + imgHeight);
         _URL.revokeObjectURL(objectUrl);
       };
       img.src = objectUrl;
 
-      console.log(imgWidth + " " + imgHeight);
-      init(container, 800, 438, img.src);
+      init(container, canWidth, canHeight, img.src);
 
       document.getElementById('saveImage').style.display = 'block';
     }
@@ -124,7 +129,7 @@
 
   // ----- IMAGE UPLOAD SECTION ---- //
 
-  init(container, 800, 438, currentImg);
+  init(container, canWidth, canHeight, currentImg);
 
 
 })();
